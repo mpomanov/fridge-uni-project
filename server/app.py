@@ -24,11 +24,13 @@ from models.camera_log import CameraLog
 from models.camera import Camera
 from models.user import User
 
+from pathlib import Path
+
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
-BASE_DIR = "/Users/mpomanov/Desktop/diplomen-proekt/fridge/server/"
+BASE_DIR = str(Path.home() / "Desktop" / "diploment-proekt" / "fridge-uni-project-main" / "server")
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{os.path.join(BASE_DIR, os.environ.get('DB_PATH', 'camera.db'))}"
