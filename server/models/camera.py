@@ -1,21 +1,6 @@
 from database import db
 import enum
 
-#"temperature": temperature,
-#        "humidity": humidity,
-#       "evaporator_temperature": evaporator_temperature,
-#        "supply_voltage": supply_voltage,
-#        "target_temperature": current_state.get("target_temperature"),
-#        "defrost_threshold_temperature": current_state.get("defrost_threshold_temperature"),
-#        "defrost_type": current_state.get("defrost_type"),
-#        "compressor_on": current_state["relay_states"].get("compressor") == 1,
-#        "ventilation_on": current_state["relay_states"].get("ventilation") == 1,
-#        "heater_on": current_state["relay_states"].get("heater") == 1,
-#        "auto_mode": current_state.get("auto_mode"),
-#        "status": current_state.get("status"),
-#        "problem": current_state.get("problem"),
-
-
 class ModeEnum(enum.Enum):
     FORCED = 'FORCED',
     AUTO = "AUTO"
