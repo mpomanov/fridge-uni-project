@@ -36,7 +36,6 @@ export default function Dashboard({ fetchData }: DashboardProps) {
 
   const handleLogout = async () => {
     try{
-
       setLogoutLoading(true)
       await fetchData("/logout", { method: "POST" });
       window.location.href = "/login";
@@ -76,7 +75,7 @@ export default function Dashboard({ fetchData }: DashboardProps) {
             <button
               onClick={handleLogout}
               disabled={logoutLoading}
-              className={`bg-black/5 hover:bg-black/10 text-black/50 text-xs px-4 py-2 rounded-full transition-colors ${logoutLoading ? "opacity-50" : ""}`}
+              className={`bg-black/5 hover:bg-black/10 text-black/50 text-xs px-4 py-2 rounded-full transition-colors ${logoutLoading ? "opacity-50" : ""} cursor-pointer`}
             >
               {logoutLoading ? "Излиза се..." : "Изход"}
             </button>
